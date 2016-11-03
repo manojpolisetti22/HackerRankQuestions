@@ -11,8 +11,14 @@ public String nextGreatest(String s){
             if(a > b){
                 arr[i - 1] = "" + a;
                 arr[i] = "" + b;
-                System.out.println(Arrays.toString(arr));
-                return;
-            }
+                break;
         }
+        String ans = "";
+        for(int i = 0 ; i < arr.length(); i++){
+            ans += arr[i];
+        }
+        if(ans.equals(s))
+            return "no answer";
+        return ans;
     }
+}
